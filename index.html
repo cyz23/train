@@ -1,170 +1,188 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-     <style>
-          body{
-          margin: 0;
-         }
-          .container{
-          width: 1200px;
-          margin: 0 auto;
-          text-align: center;
-         
-      }
-          #header{
-          display: flex;
-          align-items: center;
-          background-color: darksalmon;
-          height: 60px;
-      }
-      .logo{
-          display: flex;
-          align-items: center;
-      }
-      .logo span{
-          margin-left: 5px;
-      }
-      .nav{
-          list-style: none;
-      }
-      .nav li{
-          float: right;
-          margin-left: 5px;
-      }
-      .between{
-          justify-content: space-between;
-      }
-    
-      #content hr{
-          width: 50px;
-          border-bottom: 3px solid #000;
-          color: #000;
-      }
-      #content ul{
-      display: flex;
-      justify-content: space-around;
-      }
-      #content ul li{
-          width: 20%;
-          border: 1px solid;
-          list-style: none;
-          
-      }
-      .movie li{
-          display: inline-block;
-      }
-      .bottom{
-              width: 100%;
-              height: 200px;
-              background-color: #810014;
-          }
-      .bottom div{
-              display: inline-block;
-          }
-          .btfirst{
-              width: 40%;
-              height: 150px;
-              float: left;
-              margin-left: 5%;
-          }
-          .btsecond{
-              width: 20%;
-              height: 150px;
-              margin-right: 10%;
-              margin-top: 1%;
-              float: right;
-          }
-       
-          .btthird{
-              width: 80%;
-              height: 50px;
-              bottom: 0px;
-              text-align: center;
-            }
-     </style>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+<style>
+    body {
+        margin: 0;
+    }
+
+    .container {
+        width: 1200px;
+        margin: 0 auto;
+        text-align: center;
+
+    }
+
+    #header {
+        display: flex;
+        align-items: center;
+        background-color: darksalmon;
+        height: 60px;
+    }
+
+    .logo {
+        display: flex;
+        align-items: center;
+    }
+
+    .logo span {
+        margin-left: 5px;
+    }
+
+    .nav {
+        list-style: none;
+    }
+
+    .nav li {
+        float: right;
+        margin-left: 5px;
+    }
+
+    .between {
+        justify-content: space-between;
+    }
+
+    #content hr {
+        width: 50px;
+        border-bottom: 3px solid #000;
+        color: #000;
+    }
+
+    #content ul {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    #content ul li {
+        width: 20%;
+        border: 1px solid;
+        list-style: none;
+
+    }
+
+    .movie li {
+        display: inline-block;
+    }
+
+    .bottom {
+        width: 1200px;
+        height: 200px;
+        margin: auto;
+    }
+
+    .bottom div {
+        display: inline-block;
+    }
+
+    .btfirst {
+        width: 40%;
+        height: 150px;
+        float: left;
+        margin-left: 11%;
+    }
+
+    .btsecond {
+        width: 20%;
+        height: 150px;
+        margin-right: 10%;
+        margin-top: 1%;
+        float: right;
+    }
+
+    .btthird {
+        width: 80%;
+        height: 55px;
+        bottom: 0px;
+        text-align: center;
+    }
+</style>
 </head>
-      <body>
-     <div id='header'>
-      <div class='container logo between'>
-          <div class="logo">
-          <img width="50px" src="img9.png" alt="">
-          <span style="color: white;"> 极客大叔的网站</span>
-  </div>
-  <ul class='nav' >
-    <li><a style="color: white;" href="#">喜欢的电影</a> </li>
-    <li><a style="color: white;"href="#">喜欢的书</a></li>
-    <li><a style="color: white;"href="#">聊一聊</a></li>
-  </ul>   
-  </div>
-  </div>
 
-  <div>
-      <div id='center' class="container">
-          <div class="movie">
-              <h2>喜欢的电影</h2>
-              <hr>
-              <ul>
-                  <li>
-                      <img style="width: 260px;" src="./img1.png" alt="">
-                      <h4>海王</h4>
-                  </li>
-                  <li>
-                      <img style="width: 260px;" src="./img2.png" alt="">
-                      <h4>海扁王</h4>
-                  </li>
-                  <li>
-                      <img style="width: 260px;" src="./img3.png" alt="">
-                      <h4>绣春刀</h4>
-                  </li>
-                  <li>
-                      <img style="width: 260px;" src="./img4.png" alt="">
-                      <h4>侏罗纪世界2</h4>
+<body>
+<div id='header'>
+    <div class='container logo between'>
+        <div class="logo">
+            <img width="50px" src="img9.png" alt="">
+            <span style="color: white;"> 极客大叔的网站</span>
+        </div>
+        <ul class='nav'>
+            <li><a style="color: white;" href="#">喜欢的电影</a> </li>
+            <li><a style="color: white;" href="#">喜欢的书</a></li>
+            <li><a style="color: white;" href="#">聊一聊</a></li>
+        </ul>
+    </div>
+</div>
+
+<div>
+    <div id='center' class="container">
+        <div class="movie">
+            <h2>喜欢的电影</h2>
+            <hr>
+            <ul>
+                <li>
+                    <img style="width: 260px;" src="./img1.png" alt="">
+                    <h4>海王</h4>
                 </li>
-              </ul>
-             
+                <li>
+                    <img style="width: 260px;" src="./img2.png" alt="">
+                    <h4>海扁王</h4>
+                </li>
+                <li>
+                    <img style="width: 260px;" src="./img3.png" alt="">
+                    <h4>绣春刀</h4>
+                </li>
+                <li>
+                    <img style="width: 260px;" src="./img4.png" alt="">
+                    <h4>侏罗纪世界2</h4>
+                </li>
+            </ul>
 
-          </div>
-          <div class="movie">
-              <h2>喜欢的书</h2>
-              <hr>
-              <ul>
-                  <li>
-                      <img style="width: 260px;" src="./img5.png" alt="">
-                      <h4>黄金时代</h4>
-                  </li>
-                  <li>
-                      <img style="width: 260px;" src="./img6.png" alt="">
-                      <h4>月亮与六便士</h4>
-                  </li>
-                  <li>
-                      <img style="width: 260px;" src="./img7.png" alt="">
-                      <h4>断头王后</h4>
-                  </li>
-                  <li>
-                      <img style="width: 260px;" src="./img8.png" alt="">
-                      <h4>经济学原理</h4>
-                  </li>
-              </ul>
-             
 
-          </div>
-          <div class="bottom">
-              <div class="btfirst">
+        </div>
+        <div class="movie">
+            <h2>喜欢的书</h2>
+            <hr>
+            <ul>
+                <li>
+                    <img style="width: 260px;" src="./img5.png" alt="">
+                    <h4>黄金时代</h4>
+                </li>
+                <li>
+                    <img style="width: 260px;" src="./img6.png" alt="">
+                    <h4>月亮与六便士</h4>
+                </li>
+                <li>
+                    <img style="width: 260px;" src="./img7.png" alt="">
+                    <h4>断头王后</h4>
+                </li>
+                <li>
+                    <img style="width: 260px;" src="./img8.png" alt="">
+                    <h4>经济学原理</h4>
+                </li>
+            </ul>
+
+
+        </div>
+    </div>
+    <div style="width: 100%;background-color: #810014;text-align: center;">
+        <div class="bottom">
+            <div class="btfirst">
                 <p style="font-size: 20px; color: white;">王小波说他是一只特立独行的猪，那我就当个一只特立独行的鸟吧。交个朋友么，扫下右边的二维码。</p>
-              </div>
-              <div class="btsecond">
-                  <img src="img10.png" alt="">
-              </div>
-              <!-- <hr> -->
-              <div class="btthird">
-                  <p>版权所有&copy;极客大叔</p>
-              </div>
-          </div>
-          </div>
-  </div>
+            </div>
+            <div class="btsecond">
+                <img src="img10.png" alt="">
+            </div>
+            <!-- <hr> -->
+            <div class="btthird">
+                <p>版权所有&copy;极客大叔</p>
+            </div>
+        </div>
+    </div>
 </body>
+
 </html>
