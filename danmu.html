@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <title>Document</title>
+    <style>
+        .screen {
+            position: relative;
+            width: 1200px;
+            height: 500px;
+            border: 1px solid #ccc;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+        input {
+            border-radius: 5px;
+            display: block;
+            width: 300px;
+            height: 30px;
+            margin: 0 auto;
+            margin-top: 20px;
+        }
+
+        .btn {
+            width: 20%;
+            height: 50px;
+            line-height: 50px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        button {
+            display: inline-block;
+            width: 100px;
+            height: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="screen"></div>
+    <input type="text"><br>
+    <div class="btn">
+        <button class="shoot">发射</button>
+        <button class="clear">清屏</button>
+        <button class="opacity">弹幕透明</button>
+    </div>
+    <script>
+        $(function () {
+            var op = false;
+            $('.shoot').click(function () {
+                var txt = $('input').val();
+                var span = $('<span></span>');
+                console.log(txt);
+                var fontsize = parseInt(Math.random() * 40) + 20;
+                var top = parseInt(Math.random() * 400) - 20;
+                var color1 = parseInt(Math.random() * 256);
+                var color2 = parseInt(Math.random() * 256);
+                var color3 = parseInt(Math.random() * 256);
+                var color = `rgb(${color1},${color2},${color3})`;
+                var v = Math.random() * 20000;
+                v = v < 3000 ? 5000 : v;
+                //console.log(fontsize,top,color);
+                top = top < 20 ? '30px' : top + 'px';
+                fontsize = fontsize + 'px';
+                span.css('position', 'absolute').css('top', top).css('right', 0).css('color', color).css('font-size', fontsize);
+                if (op) {
+                    span.css('opacity', 0.2);
+                }
+                span.html(txt);
+                $('.screen').append(span);
+                $('.screen').children().animate({
+                    right: '100%'
+                }, v, function () {
+                    $(this).remove();
+                })
+            })
+            //清屏
+            $('.clear').click(function () {
+                $('.screen').empty();
+
+            })
+            $('input').keyup(function (e) {
+                if (e.keyCode == 13) {
+                    $('.shoot').click();
+                }
+            })
+            //弹幕透明
+            $('.opacity').click(function () {
+                op = !op;
+                if (op){
+                    $('span').css('opacity', 0.2);
+
+                }
+                else {
+                    $('span').css('opacity', 1);
+                }
+
+
+            })
+
+        })
+
+    </script>
+</body>
+
+</html>
