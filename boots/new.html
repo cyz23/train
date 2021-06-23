@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Bootstrap 实例 - 默认的分页</title>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <style>
+        /* 头部 */
+        body {
+            width: 1200px;
+            text-align: center;
+            margin: auto;
+        }
+
+        .container {
+            width: 1200px;
+            text-align: center;
+            margin: 0 auto;
+        }
+
+        #header {
+            display: flex;
+            align-items: center;
+            background-color: rgb(242, 242, 242);
+            height: 60px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo span {
+            margin-left: 5px;
+        }
+
+        .nav {
+            list-style: none;
+        }
+
+        .nav li {
+            float: right;
+            margin-left: 5px;
+        }
+
+        .between {
+            justify-content: space-between;
+        }
+
+        /* 头部止 */
+
+        .list li {
+            width: 300px;
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body>
+    <div id='header'>
+        <div class='container logo between'>
+            <div class="logo">
+                <img width="50px" src="./imgs/ironman.png" alt="">
+                <span style="color: black;"> 复仇者联盟</span>
+            </div>
+            <ul class='nav'>
+                <li><a style="color: black;" href="./maps.html">关于我们</a></li>
+                <li><a style="color: black;" href="./new.html">新闻</a></li>
+                <li><a style="color: black;" href="./index.html">简介</a> </li>
+            </ul>
+        </div>
+    </div>
+    <!-- 列表页 -->
+    <div>
+        <ul class="list">
+
+        </ul>
+    </div>
+    <!-- 分页 -->
+    <ul class="pagination">
+        <li onclick="pre()"><a href="#">&laquo;</a></li>
+        <li onclick="page(1)"><a href="#">1</a></li>
+        <li onclick="page(2)"><a href="#">2</a></li>
+        <li onclick="page(3)"><a href="#">3</a></li>
+        <li onclick="next()">
+            <a href="#" aria-label="Next">
+                <span aria-hidden="true">
+                    &raquo;
+                </span>
+            </a>
+        </li>
+
+    </ul>
+    <script>
+
+        let current = 1;
+        function pre() {
+            if (current > 1) {
+                page(current - 1);
+            }
+        }
+        function next() {
+            if (current < 3) {
+                page(current + 1);
+            }
+        }
+        page(1);
+        function page(page) {
+            current = page;
+            $('.list').empty();
+            // axios.get('https://lingqule.papamk.com/wp-json/w2w/v1/products?page=' + page).then(function (res) {
+            //     console.log(res.data);
+            //     for (let i = 0; i < 9; i++) {
+            //         let li = $('<li></li>');
+            //         li.append(`<img width='300px' height='300px' src=${res.data[i].images[0].src}>`);
+            //         li.append(`<h3>${res.data[i].name}</h3>`)
+            //         li.append(`<span>${res.data[i].data_created}</span>`)
+            //         $('.list').append(li);
+            //     }
+            // })
+            axios.get(`https://lingqule.papamk.com/wp-json/w2w/v1/products?page=${page}`).then(function (res) {
+                console.log(res.data);
+                for (let i = 0; i < 9; i++) {
+                    let li = $('<li></li>');
+                    li.append(`<img width='300px' height='300px' src=${res.data[i].images[0].src}>`);
+                    li.append(`<h3>${res.data[i].name}</h3>`)
+                    li.append(`<span>${res.data[i].data_created}</span>`)
+                    li.attr('id', res.data[i].id);
+                    $('.list').append(li);
+                }
+                // $('.list li').click(function () {
+                //     window.location.href = `detail.html?id=${$(this).attr('id')}`
+
+                // })
+                $('.list li').click(function () {
+                    window.location.href = `details.html?id=${$(this).attr('id')}`
+
+                })
+            })
+        }
+
+
+
+        // axios.get('').then(function(res){
+        //     console.log(res.data);
+        //     for(let i=0;i<res.data.length;i++){
+        //         let li=$('<li></li>');
+        //         li.append(`<img src=${res.data[i].images}>`)
+        //         $('.list').append(li);
+        //     }
+        // })
+    </script>
+</body>
+
+</html>

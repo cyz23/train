@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+         body {
+            width: 1200px;
+            text-align: center;
+            margin: auto;
+        }
+
+        .container {
+            width: 1200px;
+            text-align: center;
+            margin: 0 auto;
+        }
+
+        #header {
+            display: flex;
+            align-items: center;
+            background-color: rgb(242, 242, 242);
+            height: 60px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo span {
+            margin-left: 5px;
+        }
+
+        .nav {
+            list-style: none;
+        }
+
+        .nav li {
+            float: right;
+            margin-left: 5px;
+        }
+
+        .between {
+            justify-content: space-between;
+        }
+
+
+
+        /* 滑动窗口  */
+        .carousel-inner img {
+            width: 1500px;
+            height: 400px;
+        }
+
+        .icon {
+            width: 100%;
+            background-color: rgb(242, 242, 242);
+        }
+
+        .icon div {
+            width: 80px;
+            display: inline-block;
+            margin: 0 100px;
+        }
+        .icon p{
+            text-align: center;
+        }
+        .text {
+            height: 510px;
+            width: 100%;
+            /* overflow: hidden; */
+        }
+
+        .textdisplay {
+            width: 49%;
+            height: 505px;
+            margin-top: 0;
+            display: inline-block;
+            /* overflow: hidden; */
+        }
+        .textdisplay img{
+            height: 500px;
+            width: 100%;
+        }
+        .textdisplay p{
+            margin: 0 20px;
+        }
+        p {
+            text-align: left;
+        }
+
+        .news div {
+            display: inline-block;
+            width: 24%;
+            /* margin-top: 0; */
+            /* float: left; */
+        }
+
+        .news h4 {
+            text-align: left;
+            margin: 0 20px;
+        }
+        .news p{
+            margin: 0 20px;
+        }
+
+
+        /* 底部 */
+        .bottom{
+            /* background-color: #810014; */
+            width: 1200px;
+            height: 240px;
+            margin: auto;
+        }
+        .bottom div{
+            display: inline-block;
+            margin: 0 50px;
+        }
+        .btone{
+            width: 40%;
+            height: 180px;
+            float: left;
+            margin-left: 5%;
+        }
+        .bttwo{
+            /* width: 20%;
+            height: 180px; */
+            float: right;
+            margin-right: 10%;
+        }
+        /* .bottom hr{
+            background-color: black;
+            z-index: 1;
+        } */
+        .btthree{
+            width: 100%;
+            height: 50px;
+            text-align: center;
+            margin-bottom: 0px;
+        }
+        .bottom p{
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div id='header'>
+        <div class='container logo between'>
+            <div class="logo">
+                <img width="50px" src="./imgs/ironman.png" alt="">
+                <span style="color: black;"> 复仇者联盟</span>
+            </div>
+            <ul class='nav'>
+                <li><a style="color: black;" href="./maps.html">关于我们</a></li>
+                <li><a style="color: black;" href="./new.html">新闻</a></li>
+                <li><a style="color: black;" href="./index.html">简介</a> </li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="demo" class="carousel slide" data-ride="carousel">
+    </style>
+    <div>
+        <img src="./imgs/img17.png" alt="">
+        <a href="#"><h4>蔬菜水果</h4></a>
+        <hr>
+        <p>
+            蔬菜和水果是人类重要的食物来源，他们的食物组成特点也十分相似：水分含量高，能量较低，几乎不含蛋白质和脂肪，但是微量营养素维生素，矿物质含量较高，且具有一定的膳食纤维。
+
+        </p>
+    </div>
+</div>
+<div id="dibu" style="width: 100%; background-color: #d7d7d7; padding-top: 4%;">
+    <div class="bottom">
+        <div>
+            <img src="./imgs/img10.png" alt="">
+            <p>福州市仓山区万达广场B区</p>
+        </div>
+        <div>
+            <img src="./imgs/img11.png" alt="">
+            <p>admin@example.com</p>
+        </div>
+        
+        <div>
+            <img src="./imgs/img12.png" alt="">
+            <p>400-123-4567</p>
+        </div>
+        <span class="bttwo">
+            <img src="./imgs/img13.png" alt="">
+        </span>
+        <!-- <hr> -->
+        <div class="btthree">
+            <p>版权所有&copy;复仇者联盟</p>
+        </div>
+</body>
+</html>
