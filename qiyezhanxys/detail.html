@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://apps.bdimg.com/libs/jquery/1.9.1/jquery.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <link rel="stylesheet" href="detail.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/lazysizes/5.3.2/lazysizes-umd.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="box">
+        <div class="navs navbars">
+            <div class="navbar-box container">
+                <div class="logo">
+                    <img id="img1" src="logo.png">
+                    <span>YZ电影网站</span>
+                </div>
+                <div id='menus' class="menu">菜单</div>
+
+                <div id="lists" class="list list-mobile">
+                    <a href="index.html">首页</a>&nbsp;&nbsp;&nbsp;
+                    <a href="news.html">新闻</a>&nbsp;&nbsp;&nbsp;
+                    <a href="map.html" style="pointer-events: none;">关于我们</a>&nbsp;&nbsp;&nbsp;
+                    <a href="gerenzhanshiye.html" style="pointer-events: none;">个人展示页</a>&nbsp;&nbsp;&nbsp;
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--     <div id='div'></div> -->
+    <div id='main' class="container">
+
+    </div>
+    <div class="footer">
+        <div class="container content">
+            <div id="liao" class="row1 row">
+                <div id="footer-img" class="col-lg-3 col-md-4 col-sm-6 col-xs-12" style="width: 200px; height: 250px;">
+                    <img data-src="tb5.png" class="lazyload" alt="" style="width: 200px; height: 200px;">
+                    <p style="font-size: 20px;">福州市闽江学院</p>
+                </div>
+                <div id="footer-img" class="col-lg-3 col-md-4 col-sm-6 col-xs-12" style="width: 200px; height: 250px; ">
+                    <img data-src="tb6.png" class="lazyload" alt="" style="width: 200px; height: 200px;">
+                    <p style="font-size: 20px;">321321321@qq.com</p>
+                </div>
+                <div id="footer-img" class="col-lg-3 col-md-4 col-sm-6 col-xs-12" style="width: 200px; height: 250px;">
+                    <img data-src="tb7.png" class="lazyload" alt="" style="width: 200px; height: 200px;">
+                    <p style="font-size: 20px;">152-3333-6666</p>
+                </div>
+                <div id="footer-img" class="col-lg-3 col-md-4 col-sm-6 col-xs-12" style="width: 200px; height: 250px;">
+                    <img data-src="erweima.jpg" class="lazyload" alt="" style="width: 200px; height: 200px;">
+                    <p style="font-size: 20px;">扫一扫，了解我们</p>
+                </div>
+            </div>
+            <div class="b">版权所有©极客大叔</div>+
+
+
+        </div>
+    </div>
+    
+    <script>
+        var idx = window.location.search.split('=')[1];
+
+        axios.get(`https://www.fastmock.site/mock/0da5df0aaf376023eb1e3b354b831e0a/cyz123/dd?id=${idx}`).then(function(res) {
+            console.log(res.data);
+            /*  let title = $(`<h1>${res.data.name}</h1>`);
+             $('#div').append(title); */
+
+            var main = $('#main');
+            let title = $(`<h1>${res.data.data.list[0].title}</h1>`);
+            main.append(title);
+            main.append(`<p style="color:red; font-size: 20px; margin: auto;">${res.data.data.list[0].time}</p>`);
+            main.append(`<img data-src="${res.data.data.list[0].img}" class="lazyload" style="height:30% ; width:60%;" alt="">`);
+            main.append(`<p style="font-size: 28px; text-align:left">${res.data.data.list[0].mainContent}</p>`);
+        })
+    </script>
+
+    <script>
+        $(function() {
+            $('#lists').removeClass('list-mobile')
+            $('#menus').click(function() {
+                if ($('#lists').hasClass('list-mobile')) {
+                    $('#lists').removeClass('list-mobile')
+                } else {
+                    $('#lists').addClass('list-mobile')
+                }
+            })
+        })
+    </script>
+</body>
+
+</html>

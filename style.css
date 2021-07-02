@@ -1,0 +1,33 @@
+.rows{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+@media screen and (min-width: 540px){
+    .col{
+        width: 100%;
+    }
+    
+}
+
+@media screen and (min-width: 720px){
+    .col{
+        width: 50%;
+    }
+    
+}
+
+@media screen and (min-width: 9600px){
+    .col{
+        width: 33.3%;
+    }
+    
+}
+
+@media screen and (min-width: 1140px){
+    .col{
+        width: 25%;
+    }
+    
+}

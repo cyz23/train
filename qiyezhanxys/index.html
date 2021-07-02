@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://apps.bdimg.com/libs/jquery/1.9.1/jquery.min.js"></script>
+    <!--  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous"> -->
+    <!--     <link rel="stylesheet" href="qiyezhan.css"> -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script href="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://apps.bdimg.com/libs/jquery/1.9.1/jquery.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- <script href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script> -->
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="index.css">
+    <title>首页</title>
+    <style>
+        .carousel-item img{
+            width: 80% !important;
+            margin: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="navs navbars">
+            <div class="navbar-box container">
+                <div class="logo">
+                    <img id="img1" src="logo.png">
+                    <span>YZ电影网站</span>
+                </div>
+                <div id='menus' class="menu">菜单</div>
+
+                <div id="lists" class="list list-mobile">
+                    <a href="index.html">首页</a>&nbsp;&nbsp;&nbsp;
+                    <a href="news.html">新闻</a>&nbsp;&nbsp;&nbsp;
+                    <a href="map.html">关于我们</a>&nbsp;&nbsp;&nbsp;
+                    <a href="gerenzhanshiye.html">个人展示页</a>&nbsp;&nbsp;&nbsp;
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="img1.jpg" class="d-block w-100 img-responsive" alt="..." height="100%" width="100%">
+            </div>
+            <div class="carousel-item">
+                <img src="img2.jpg" class="d-block w-100 img-responsive" alt="..." height="100%" width="100%">
+            </div>
+            <div class="carousel-item">
+                <img src="img3.jpg" class="d-block w-100 img-responsive" alt="..." height="100%" width="100%">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <div>
+        <div class="container content">
+            <div class="book title">
+                <h2 id="no1">
+                    服务范围
+                </h2>
+
+                <div id="c1" class="container">
+                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+                        <img src="tb1.png" height="50px" width="50px">
+                        <br>
+                        <span>影票购买</span>
+                    </div>
+                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+                        <img src="tb2.png" height="50px" width="50px">
+                        <br>
+                        <span>电影收藏</span>
+                    </div>
+                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+                        <img src="tb3.png" height="50px" width="50px">
+                        <br>
+                        <span>售后服务</span>
+                    </div>
+                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+                        <img src="tb4.png" height="50px" width="50px">
+                        <br>
+                        <span>联系我们</span>
+                    </div>
+
+                </div>
+            </div>
+            <div class="book title">
+                <div class="introduction w container">
+                    <h2>热门电影</h2>
+                    <div class="tro row">
+                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 img-responsive"><img src="img4.png" class="lazyload" alt=""></div>
+                        <div class="txt11 col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
+                            <br>
+                            <br>
+                            <h3>你好李焕英</h3>
+                            <p style="font-size:21px;">导演：贾玲&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;主 演：贾玲、张小斐、沈腾、陈赫、刘佳</p>
+                            <p style="font-size:21px;">简介：2001年的某一天，刚刚考上大学的贾晓玲（贾玲 饰）经历了人生中的一次大起大落。
+                                一心想要成为母亲骄傲的她却因母亲突遭严重意外，而悲痛万分。在贾晓玲情绪崩溃的状态下，竟意外的回到了1981年，
+                                并与年轻的母亲李焕英（张小斐 饰）相遇，二人形影不离，宛如闺蜜。与此同时，也结识了一群天真善良的好朋友。
+                                晓玲以为来到了这片“广阔天地”，她可以凭借自己超前的思维，让母亲“大有作为”，但结果却让晓玲感到意外...... </p>
+                        </div>
+                    </div>
+
+
+                    <div class="tro tro2 row">
+
+                        <div class="txt col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                            <h3>寻龙传说</h3>
+                            <p style="font-size:21px;">导 演：唐·霍尔&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;主 演：凯莉·玛丽·陈、奥卡菲娜、嘉玛·陈、金大贤、吴珊卓</p>
+                            <p style="font-size:21px;">简介：很久以前，在充满奇幻色彩的龙佑之邦，人类和龙和谐地生活在一起。但当一股邪恶的力量袭来，
+                                龙牺牲了自己来拯救人类。500年后，同样的邪恶力量卷土重来，只有一个孤独的战士拉雅（凯莉·玛丽·陈 配音）承担重任，
+                                追踪传说中的最后一条龙，以修复这块破碎的土地，团结分裂的人民。在她的旅程中，她也会逐渐了解到拯救世界不仅仅需要一条龙，
+                                还需要信任和团队合作。 </p>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 img-responsive">
+                            <img src="img5.png" alt=""></div>
+                    </div>
+
+                    <div class="tro row">
+                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 img-responsive">
+                            <img src="img6.png" alt=""></div>
+                        <div class="txt col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                            <h3>我要我们在一起</h3>
+                            <p style="font-size:21px;">导 演：沙漠&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;主 演：屈楚萧、张婧仪、孙宁、张垚、李嘉灏</p>
+                            <p style="font-size:21px;">简介：你有没有爱过一个人，曾经拼了命，只为和TA在一起。十年前，差生吕钦扬当众告白凌一尧，
+                                两人从校园步入社会，为了让她幸福，他不惜以命相搏。然而金钱、房子、婚姻等现实的考验，却将两人越推越远。十年长跑，
+                                他们能否还记得曾经刻在心底的约定：我要我们在一起。 电影改编自长帖《与我十年长跑的女友明天要嫁人了》 </p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row t1 ">
+                    <div class="list list11 " style="display: flex; list-style-type: none; justify-content: space-around;"></div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="footer">
+        <div class="container content">
+            <div id="liao" class="row1 row">
+                <div id="footer-img" class="col-lg-3 col-md-4 col-sm-6 col-xs-12 img-responsive" style="width: 200px; height: 250px;">
+                    <img src="tb5.png" alt="" style="width: 200px; height: 200px;">
+                    <p style="font-size: 20px;">福州市闽江学院</p>
+                </div>
+                <div id="footer-img" class="col-lg-3 col-md-4 col-sm-6 col-xs-12 img-responsive" style="width: 200px; height: 250px; ">
+                    <img src="tb6.png" alt="" style="width: 200px; height: 200px;">
+                    <p style="font-size: 20px;">321321321@qq.com</p>
+                </div>
+                <div id="footer-img" class="col-lg-3 col-md-4 col-sm-6 col-xs-12 img-responsive" style="width: 200px; height: 250px;">
+                    <img src="tb7.png" alt="" style="width: 200px; height: 200px;">
+                    <p style="font-size: 20px;">152-3333-6666</p>
+                </div>
+                <div id="footer-img" class="col-lg-3 col-md-4 col-sm-6 col-xs-12 img-responsive" style="width: 200px; height: 250px;">
+                    <img src="erweima.jpg" alt="" style="width: 200px; height: 200px;">
+                    <p style="font-size: 20px;">扫一扫，了解我们</p>
+                </div>
+            </div>
+            <div class="b">版权所有©极客大叔</div>
+        </div>
+    </div>
+
+
+
+
+
+</body>
+
+</html>
+<script>
+    $(function() {
+        $('#lists').removeClass('list-mobile')
+        $('#menus').click(function() {
+            if ($('#lists').hasClass('list-mobile')) {
+                $('#lists').removeClass('list-mobile')
+            } else {
+                $('#lists').addClass('list-mobile')
+            }
+        })
+    })
+</script>
+<script>
+    let current = Number(window.location.href.split("?page=")[1]) || 1;
+
+    page(current);
+
+    function page(page) {
+        current = page;
+
+        $('.t1').empty();
+        axios.get(`https://www.fastmock.site/mock/0da5df0aaf376023eb1e3b354b831e0a/cyz123/ff?page=${page}`).then(function(res) {
+            console.log(res.data);
+
+            for (let i = 0; i < 4; i++) {
+                let li = $("<li class='col-lg-3 col-md-4 col-sm-6 col-xs-12 img-responsive'></li>");
+                li.append(`<img width='250px' height='220px' style=" padding:20px;" src="${res.data.data.list[i].img}" alt="">`);
+                li.append(`<p style="font-weight: bold; font-size: 20px;">${res.data.data.list[i].title}</p>`);
+                li.append(`<p style="color:red; font-size: 10px; margin: auto;">${res.data.data.list[i].time}</p>`);
+                li.append(`<p style="font-size: 12px;">${res.data.data.list[i].content}</p>`);
+                li.attr('id', res.data.data.list[i].id)
+                $(".t1").append(li);
+
+                $('.t1 li').click(function() {
+                    window.location.href = `detail.html?id=${$(this).attr('id')}`
+                })
+            }
+
+
+        })
+    }
+</script>

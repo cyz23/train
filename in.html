@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/js/bootstrap.min.js"></script>
+    <script src="https://cdn.staticfile.org/jquery/3.1.1/jquery.min.js"></script>
+    <title>Document</title>
+    <style>
+        /* body {
+            margin: 0;
+        }
+
+        #header {
+            display: flex;
+            align-items: center;
+            background-color: #fe4b4e;
+            height: 60px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo span {
+            margin-left: 5px;
+        }
+
+        .nav {
+            list-style: none;
+        }
+
+        .nav li {
+            float: right;
+            margin-left: 5px;
+        }
+
+        .between {
+            justify-content: space-between;
+        } */
+
+
+
+        /* element{
+
+        }
+        a{
+            color: white;
+            text-decoration: none;
+        }
+
+        .navbars{
+            background-color: #c8484e;
+        }
+        .navbars .navbars_box .menu{
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: red;
+            padding: 20px 0;
+        }
+        .navbars .navbars_box .logo{
+            color: #fff;
+        }
+
+        @media screen and (max-width:720){
+            .navbars .navbars_box .list{
+                display: none;
+            }
+            .navbars .navbars_box .menu{
+                display: block;
+            }
+            .list-mobile{
+                width: 100%;
+                display: flex !important;
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+ */
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class='navs navbars'>
+            <div class="navbar-box container">
+                <div class="a logo">
+                    <img width="50px" src="img9.png" alt="">
+                    <span style="color: white;"> 极客大叔的网站</span>
+                </div>
+                <div id="menus" class="menu">
+                    菜单
+                </div>
+                <div class='b list' id="lists">
+                    <a href="#">喜欢的电影</a>
+                    <a href="#">喜欢的书</a>
+                    <a class="c" style="pointer-events: none;" href="#">聊一聊</a>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="content container">
+            <div class="title">
+                <h2 id="mv">喜欢的电影</h2>
+                <div class="a"></div>
+                <br>
+            </div>
+            <ul class="rows row">
+                <li class="col-x1-3 col-lg-4 col-md-6 col-sm-12">
+                    <div class="card-box">
+                        <a href="#">
+                            <img src="#" alt="">
+                            <div class="a">寄生虫</div>
+                        </a>
+                    </div>
+                </li>
+                <li class="col-x1-3 col-lg-4 col-md-6 col-sm-12">
+                    <div class="card-box">
+                        <a href="#">
+                            <img src="#" alt="">
+                            <div class="a">普通人</div>
+                        </a>
+                    </div>
+                </li>
+                <li class="col-x1-3 col-lg-4 col-md-6 col-sm-12">
+                    <div class="card-box">
+                        <a href="#">
+                            <img src="#" alt="">
+                            <div class="a">三时四餐</div>
+                        </a>
+                    </div>
+                </li>
+                <li class="col-x1-3 col-lg-4 col-md-6 col-sm-12">
+                    <div class="card-box">
+                        <a href="#">
+                            <img src="#" alt="">
+                            <div class="a">人间课堂</div>
+                        </a>
+                    </div>
+                </li>
+                <li class="col-x1-3 col-lg-4 col-md-6 col-sm-12">
+                    <div class="card-box">
+                        <a href="#">
+                            <img src="#" alt="">
+                            <div class="a">人间课堂</div>
+                        </a>
+                    </div>
+                </li>
+                <li class="col-x1-3 col-lg-4 col-md-6 col-sm-12">
+                    <div class="card-box">
+                        <a href="#">
+                            <img src="#" alt="">
+                            <div class="a">人间课堂</div>
+                        </a>
+                    </div>
+                </li>
+            </ul>
+
+
+            <div class="title">
+                <h2 id="book">喜欢的书</h2>
+                <br>
+                <div class="a">
+                </div>
+                <br>
+            </div>
+            <ul class="rows row">
+                <li class="col-x1-3 col-lg-3 col-md-6 col-sm-12">
+                    <a href="#">
+                        <img src="#" alt="">
+                        <div class="a">两兄弟</div>
+                    </a>
+                </li>
+                <li class="col-x1-3 col-lg-3 col-md-6 col-sm-12">
+                    <a href="#">
+                        <img src="#" alt="">
+                        <div class="a">应仁之乱</div>
+                    </a>
+                </li>
+                <li class="col-x1-3 col-lg-3 col-md-6 col-sm-12">
+                    <a href="#">
+                        <img src="#" alt="">
+                        <div class="a">人写的历史</div>
+                    </a>
+                </li>>
+                <li class="col-x1-3 col-lg-3 col-md-6 col-sm-12">
+                    <a href="#">
+                        <img src="#" alt="">
+                        <div class="a">走出唯一的真理观</div>
+                    </a>
+                </li>
+                <li class="col-x1-3 col-lg-3 col-md-6 col-sm-12">
+                    <a href="#">
+                        <img src="#" alt="">
+                        <div class="a">走出唯一的真理观</div>
+                    </a>
+                </li>
+                <li class="col-x1-3 col-lg-4 col-md-6 col-sm-12">
+                    <a href="#">
+                        <img src="#" alt="">
+                        <div class="a">走出唯一的真理观</div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+
+        </div>
+        <div class="footer">
+            <div id="liao" class="a row">
+            <div class="col-xl-6 col-lg-12">
+            <div>
+                <p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp王小波说他是一只特立独行的猪，那我就当个一只特立独行的鸟吧。</p>
+                <p>交个朋友么?扫下右边的二维码。</p>
+            </div>
+        </div>
+            <div id="footer-img" class="col-xl-6 col-lg-12">
+                <img src="#" alt="" style="width: 200px;">
+            </div>
+        </div>
+            <!-- <hr> -->
+            <div class="b">
+                版权所有@极客大叔
+            </div>
+        </div>
+    </div>
+    </body>
+    <script>
+        $(function () {
+            if($('#lists').hasClass('list-mobile')) {
+                 ($'#lists').removeClass('list-mobile')
+            }else{
+            $('#list').addClass('list-mobile')
+            }
+        })
+        })
+    </script>
+</html>

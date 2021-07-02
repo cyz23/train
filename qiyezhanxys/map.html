@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <title>地图展示</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <script src="https://apps.bdimg.com/libs/jquery/1.9.1/jquery.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script href="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://apps.bdimg.com/libs/jquery/1.9.1/jquery.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/lazysizes/5.3.2/lazysizes-umd.js"></script>
+    <link rel="stylesheet" href="map.css">
+    <style>
+        #container {
+            overflow: hidden;
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            font-family: "微软雅黑";
+        }
+        
+        .info {
+            z-index: 999;
+            width: auto;
+            min-width: 22rem;
+            padding: .75rem 1.25rem;
+            margin-left: 1.25rem;
+            position: fixed;
+            top: 1rem;
+            background-color: #fff;
+            border-radius: .25rem;
+            font-size: 14px;
+            color: #666;
+            box-shadow: 0 2px 6px 0 rgba(27, 142, 236, 0.5);
+        }
+    </style>
+    <script src="//api.map.baidu.com/api?type=webgl&v=1.0&ak=SPaGfop1o6mTL1u13lLyCeCVGpjSkGzg"></script>
+</head>
+
+<body>
+    <div class="box">
+        <div class="navs navbars">
+            <div class="navbar-box container">
+                <div class="logo">
+                    <img id="img1" src="logo.png">
+                    <span>YZ电影网站</span>
+                </div>
+                <div id='menus' class="menu">菜单</div>
+
+                <div id="lists" class="list list-mobile">
+                    <a href="index.html">首页</a>&nbsp;&nbsp;&nbsp;
+                    <a href="news.html">新闻</a>&nbsp;&nbsp;&nbsp;
+                    <a href="map.html">关于我们</a>&nbsp;&nbsp;&nbsp;
+                    <a href="gerenzhanshiye.html">个人展示页</a>&nbsp;&nbsp;&nbsp;
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div id="content divheight" class="container book">
+            <div class="row tt">
+                <h2 id="no1">
+                    关于我们
+                </h2>
+                <div id="container1" class="col-lg-6 col-md-6 col-sm-12 col-xs-12" style="width: 30rem; height: 20rem;">
+
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12" style="text-align: left;  font-size: 1rem;">
+
+                    <span>本网站为非赢利性站点, 本站之片源、字幕均来自互联网，仅供个人欣赏、学习之用，版权归发行公司所有，任何组织和个人不得公开传播或用于任何商业盈利用途，否则一切后果由该组织或个人承担。本站和制作者不承担任何法律及连带责任！</span>
+                    <br>
+                    <br>
+                    <span>地址：福州市闽江学院</span>
+                    <br>
+                    <br>
+                    <span>邮箱：321321321@qq.com</span>
+                    <br>
+                    <br>
+                    <span>联系方式：152-3333-6666</span>
+                    <br>
+                    <br>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="footer">
+        <div class="container content">
+            <div id="liao" class="row1 row">
+                <div id="footer-img" class="col-lg-3 col-md-4 col-sm-6 col-xs-12" style="width: 200px; height: 250px;">
+                    <img data-src="tb5.png" class="lazyload" alt="" style="width: 200px; height: 200px;">
+                    <p style="font-size: 20px;">福州市闽江学院</p>
+                </div>
+                <div id="footer-img" class="col-lg-3 col-md-4 col-sm-6 col-xs-12" style="width: 200px; height: 250px; ">
+                    <img data-src="tb6.png" class="lazyload" alt="" style="width: 200px; height: 200px;">
+                    <p style="font-size: 20px;">321321321@qq.com</p>
+                </div>
+                <div id="footer-img" class="col-lg-3 col-md-4 col-sm-6 col-xs-12" style="width: 200px; height: 250px;">
+                    <img data-src="tb7.png" class="lazyload" alt="" style="width: 200px; height: 200px;">
+                    <p style="font-size: 20px;">152-3333-6666</p>
+                </div>
+                <div id="footer-img" class="col-lg-3 col-md-4 col-sm-6 col-xs-12" style="width: 200px; height: 250px;">
+                    <img data-src="erweima.jpg" class="lazyload" alt="" style="width: 200px; height: 200px;">
+                    <p style="font-size: 20px;">扫一扫，了解我们</p>
+                </div>
+            </div>
+            <div class="b">版权所有©极客大叔</div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
+<script>
+    $(function() {
+        $('#lists').removeClass('list-mobile')
+        $('#menus').click(function() {
+            if ($('#lists').hasClass('list-mobile')) {
+                $('#lists').removeClass('list-mobile')
+            } else {
+                $('#lists').addClass('list-mobile')
+            }
+        })
+    })
+</script>
+<script>
+    var map = new BMapGL.Map('container1'); // 创建Map实例
+
+    map.centerAndZoom(new BMapGL.Point(119.176895, 26.072713), 15); // 初始化地图,设置中心点坐标和地图级别
+    map.enableScrollWheelZoom(true); // 开启鼠标滚轮缩放
+    // 创建点标记
+    // var marker1 = new BMapGL.Marker(new BMapGL.Point(119.176895, 26.072713));
+    // 在地图上添加点标记
+    // map.addOverlay(marker1);
+
+    var myGeo = new BMapGL.Geocoder();
+    // 将地址解析结果显示在地图上，并调整地图视野
+    myGeo.getPoint('闽江学院', function(point) {
+        if (point) {
+
+            map.addOverlay(new BMapGL.Marker(point, {
+                title: '福建省福州市闽侯县上街镇溪源宫路200号闽江学院'
+            }))
+        } else {
+            alert('您选择的地址没有解析到结果！');
+        }
+    }, '福建省')
+</script>

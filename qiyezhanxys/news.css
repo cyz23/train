@@ -1,0 +1,233 @@
+{
+    margin: 0;
+    padding: 0;
+}
+
+.t1 {
+    text-align: center;
+    justify-content: space-around;
+}
+
+.tro {
+    width: 100%;
+    text-align: left;
+    margin-bottom: 10px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tro img {
+    display: block;
+    float: left;
+    height: 100%;
+    width: 100%;
+    border-radius: 15px;
+}
+
+.tro .txt {
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+}
+
+.txt p {
+    text-align: left;
+    padding: 20px;
+    font-size: 20px;
+    text-indent: 2em;
+}
+
+.txt p:nth-child(2) {
+    border-bottom: 1px solid #ccc;
+}
+
+.tro2 img {
+    float: right;
+}
+
+
+/* .container {
+    margin: 0 auto;
+} */
+
+#img1 {
+    height: 40px;
+    width: 40px;
+}
+
+ul,
+li {
+    list-style-type: none;
+    padding: 0px;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+a:hover {
+    color: black;
+}
+
+.navbars {
+    background-color: #c8484e;
+    font-size: 18px;
+}
+
+.navbars .navbar-box {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+
+.navbars .navbar-box .logo {
+    color: #fff;
+}
+
+.navbars .navbar-box .menu {
+    display: none;
+    color: #fff;
+    font-size: 18px;
+    border: 2px solid;
+    padding: 8px;
+    border-radius: 20px;
+}
+
+@media screen and (max-width:720px) {
+    .navbars .navbar-box .list {
+        display: none;
+    }
+    .navbars .navbar-box .menu {
+        display: block;
+    }
+    .list-mobile {
+        width: 100%;
+        display: flex !important;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.content .title {
+    text-align: center;
+}
+
+.content .title .a {
+    height: 4px;
+    background-color: #c8484e;
+    width: 100px;
+    margin: 0 auto;
+}
+
+.content .title #mv {
+    margin: 20px;
+}
+
+
+/* .content .title #book {
+    margin: 20px;
+} */
+
+.content .rows img {
+    width: 94%;
+    padding: 3%;
+}
+
+.content .rows .card-box {
+    height: 310px;
+    width: 200px;
+    background-color: #888;
+    margin: 0 auto 10px;
+    /*     box-sizing: content-box; */
+}
+
+.content .rows .card-box .a {
+    text-align: center;
+}
+
+.content .rows .card-box:hover img {
+    width: 98%;
+    margin: 1%;
+}
+
+.footer {
+    margin-top: 50px;
+    width: 100%;
+    background-color: #d7d7d7;
+    color: rgb(0, 0, 0);
+}
+
+.footer .a {
+    margin-left: 10%;
+    margin-right: 10%;
+    padding-top: 80px;
+    font-size: 22px;
+}
+
+.footer .b {
+    /*   height: 40px;
+    margin-left: 10%;
+    margin-right: 10%;
+    border-top: 7px solid #000; */
+    text-align: center;
+    font-size: 22px;
+}
+
+
+/* .footer #footer-img {
+    display: flex;
+     justify-content: flex-end;
+    justify-content: center;
+    margin-bottom: 10px;
+} */
+
+.rows {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+#c1 {
+    background-color: gray;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.row1 {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+#liao {
+    text-align: center;
+}
+
+#mapleft {
+    display: flex;
+    float: left;
+}
+
+.tt {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+
+/* #content ul li:hover {
+    border: 1px solid red;
+}
+ */
+
+.list11 li:hover {
+    color: red;
+    border: 1px solid red;
+}
+© 2021 GitHub, Inc.
