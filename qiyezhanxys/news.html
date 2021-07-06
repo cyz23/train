@@ -101,9 +101,7 @@
             </div>
         </div>
         <div>
-            <ul class="list container list11 ">
-
-            </ul>
+            
         </div>
         <!-- 分页 -->
         <nav aria-label="Page navigation example">
@@ -232,7 +230,7 @@
             axios.get(`https://www.fastmock.site/mock/0da5df0aaf376023eb1e3b354b831e0a/cyz123/ff?page=${page}`).then(function (res) {
                 console.log(res.data);
 
-                for (let i = 0; i < 4; i++) {
+                for (let i = 0; i < 8; i++) {
                     let li = $("<li class='col-lg-6 col-md-6 col-sm-12 col-xs-12 img-responsive'></li>");
                     li.append(`<img class='img-responsive' width='300px' height='300px' src="${res.data.data.list[i].img}" alt="">`);
                     li.append(`<p style="font-weight: bold; font-size:20px">${res.data.data.list[i].title}</p>`);
